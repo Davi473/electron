@@ -34,7 +34,9 @@ var createWindow = function () {
             preload: path.join(__dirname, 'preload.js'),
         },
     });
-    mainWindow.loadURL("file://".concat(__dirname, "/index.html"));
+    console.log(__dirname);
+    var pages = "file://".concat(__dirname, "/../pages/index.html");
+    mainWindow.loadURL(pages);
     mainWindow.on('closed', function () {
         mainWindow = null;
     });
